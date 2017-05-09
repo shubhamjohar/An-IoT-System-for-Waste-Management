@@ -49,26 +49,14 @@ void loop()
   Serial.println();
   }
  
-  //checking if anything is within the safezone, if not, keep
-  //green LED on if safezone violated, activate red LED instead
- /* if (cm > safeZone)
-  {
-    digitalWrite(greenLed, HIGH);
-    digitalWrite(redLed, LOW);
-  }
-  else
-  {
-    digitalWrite(redLed, HIGH);
-    digitalWrite(greenLed, LOW);
-  }
- */
+ 
   delay(1000);
 }
  
 long microsecondsToCentimeters(long microseconds)
 {
-  // The speed of sound is 340 m/s or 29 microseconds per centimeter.
-  // The ping travels out and back, so to find the distance of the
-  // object we take half of the distance travelled.
+  /* The speed of sound is 340 m/s or 29 microseconds per centimeter. The ping travels out and back, so to find the distance of the
+ object we take half of the distance travelled.
+ */
   return microseconds / 29 / 2;
 }
